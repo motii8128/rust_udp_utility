@@ -29,7 +29,7 @@ impl Logger {
     /// * `message` - 内容
     pub fn log_warn(&self, name : &str, message : &str)
     {
-        let out = format!("[{}][{}][INFO] {}", self.timer.elapsed().as_secs().to_string(), name, message);
+        let out = format!("[{}][{}][WARN] {}", self.timer.elapsed().as_secs().to_string(), name, message);
 
         println!("{}", out.yellow());
     }
@@ -39,7 +39,7 @@ impl Logger {
     /// * `message` - 内容
     pub fn log_error(&self, name : &str, message : &str)
     {
-        let out = format!("[{}][{}][INFO] {}", self.timer.elapsed().as_secs().to_string(), name, message);
+        let out = format!("[{}][{}][ERROR] {}", self.timer.elapsed().as_secs().to_string(), name, message);
 
         println!("{}", out.red());
     }
